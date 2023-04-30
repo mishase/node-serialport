@@ -18,13 +18,6 @@ interface InternalSettings<T extends BindingInterface> {
   highWaterMark: number
 }
 
-const defaultSetFlags: SetOptions = {
-  brk: false,
-  cts: false,
-  dtr: true,
-  rts: true,
-}
-
 interface PoolBuffer extends Buffer {
   used: number
 }
@@ -376,7 +369,7 @@ export class SerialPortStream<T extends BindingInterface = BindingInterface> ext
       return this._asyncError(new Error('Port is not open'), callback)
     }
 
-    const settings = { ...defaultSetFlags, ...options }
+    const settings = { ...options }
     debug('#set', settings)
     this.port.set(settings).then(
       () => {
