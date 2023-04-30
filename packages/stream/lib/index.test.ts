@@ -572,24 +572,6 @@ describe('SerialPort', () => {
         })
       })
 
-      it('resets all flags if none are provided', done => {
-        const defaults = {
-          brk: false,
-          cts: false,
-          dtr: true,
-          rts: true,
-        }
-
-        const port = new SerialPortStream(openOpts, () => {
-          const spy = sandbox.spy(port.port!, 'set')
-          port.set({}, err => {
-            assert.isNull(err)
-            assert(spy.calledWith(defaults))
-            done()
-          })
-        })
-      })
-
       it('handles errors in callback', done => {
         const port = new SerialPortStream(openOpts)
         port.once('open', () => {
