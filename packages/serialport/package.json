@@ -50,8 +50,8 @@
     }
   ],
   "dependencies": {
-    "@serialport/binding-mock": "10.2.2",
-    "@serialport/bindings-cpp": "11.0.1",
+    "@serialport/binding-mock": "github:mishase/binding-mock",
+    "@serialport/bindings-cpp": "github:mishase/bindings-cpp",
     "@serialport/parser-byte-length": "11.0.0",
     "@serialport/parser-cctalk": "11.0.0",
     "@serialport/parser-delimiter": "11.0.0",

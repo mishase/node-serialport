@@ -106,14 +106,14 @@ describe('SerialPort', () => {
         xon: true,
         xoff: true,
         xany: true,
-        rtscts: true,
+        cts: true,
         autoOpen: false,
       }
       const port = new SerialPortStream(options)
       assert.isTrue(port.settings.xon)
       assert.isTrue(port.settings.xoff)
       assert.isTrue(port.settings.xany)
-      assert.isTrue(port.settings.rtscts)
+      assert.isTrue(port.settings.cts)
       done()
     })
   })

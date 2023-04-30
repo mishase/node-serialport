@@ -7,11 +7,11 @@
     "build": "tsc --build tsconfig-build.json"
   },
   "dependencies": {
-    "@serialport/bindings-interface": "1.2.2",
+    "@serialport/bindings-interface": "github:mishase/bindings-interface",
     "debug": "4.3.4"
   },
   "devDependencies": {
-    "@serialport/binding-mock": "^10.2.2",
+    "@serialport/binding-mock": "github:mishase/binding-mock",
     "typescript": "5.0.4"
   },
   "engines": {

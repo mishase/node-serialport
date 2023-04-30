@@ -91,7 +91,7 @@ const createPort = ({ path, baudRate }: { path: string; baudRate: number }) => {
     dataBits: args.databits,
     parity: args.parity,
     stopBits: args.stopbits,
-    rtscts: args.flowCtl === 'CTSRTS',
+    cts: args.flowCtl === 'CTSRTS',
     xon: args.flowCtl === 'XONOFF',
     xoff: args.flowCtl === 'XONOFF',
   }
