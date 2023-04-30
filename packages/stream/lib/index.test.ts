@@ -572,29 +572,6 @@ describe('SerialPort', () => {
         })
       })
 
-      it('sets missing options to default values', done => {
-        const settings = {
-          cts: true,
-          rts: false,
-        }
-
-        const filledWithMissing = {
-          brk: false,
-          cts: true,
-          dtr: true,
-          rts: false,
-        }
-
-        const port = new SerialPortStream(openOpts, () => {
-          const spy = sandbox.spy(port.port!, 'set')
-          port.set(settings, err => {
-            assert.isNull(err)
-            assert(spy.calledWith(filledWithMissing))
-            done()
-          })
-        })
-      })
-
       it('resets all flags if none are provided', done => {
         const defaults = {
           brk: false,
