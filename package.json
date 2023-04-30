@@ -17,7 +17,8 @@
     "test:arduino": "TEST_PORT=$(./bin/find-arduino.ts) npm test",
     "test:watch": "mocha -w",
     "test": "nyc --reporter lcov --reporter text mocha",
-    "typecheck": "lerna exec tsc"
+    "typecheck": "lerna exec tsc",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
